@@ -1,38 +1,231 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --default-color: #0e49b5;
+  --primary-color: #31326f;
+  --secondary-color: #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:focus {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  user-select: inherit;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1100px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.navbar .logo {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  list-style-type: none;
+}
+
+.navbar ul a {
+  display: inline-block;
+  color: #0000ff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navbar ul a:hover {
+  border-bottom: 2px solid rgba(0, 47, 201, 0.7);
+}
+
+.home {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.home h1 {
+  padding-bottom: 1rem;
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--default-color);
+  color: #fff;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-icon {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.btn-primary {
+  background-color: #1f441e;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Card Styles */
+
+.card {
+  box-shadow: 0 2px 4px 0px rgba(3, 3, 3, 0.4);
+  width: 485px;
+  padding: 2.5rem 4.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  /* margin-left: 1rem; */
+}
+
+.card a {
   text-align: center;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card h4 {
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+ 
+}
+
+.card input {
+  border: none;
+  border-bottom: 1px solid rgba(3, 3, 3, 0.2);
+  margin: 8px 0;
+  padding: 4px 0;
+}
+
+.card input:focus {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+/* Create user styles */
+
+.create-user form {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.create-user form h1 {
+  margin: 2rem 0;
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create-user form input {
+  border: 0;
+  border-bottom: 1px solid rgba(3, 3, 3, 0.2);
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+.create-user form input:focus {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.create-user form label span {
+  color: red;
+}
+
+
+/* Cohort Page Styles */
+
+.cohort-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.cohort-section a {
+  text-decoration: none;
+}
+
+.cohort-card {
+  box-shadow: 0 0px 4px 2px rgba(3, 3, 3, 0.2);
+  padding: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cohort-card:hover {
+  transform: translateY(-15px);
+}
+
+.cohort-card h1 {
+  color: #000;
+}
+
+.cohort-card p {
+  color: var(--secondary-color);
+}
+
+.cohort-card small {
+  margin-right: 1rem;
+  color: #555;
+}
+
+/*Update Page Styles*/
+
+.update {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 2rem;
+}
+
+/* Layout styles */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
 }
